@@ -2,7 +2,7 @@
 
 git config --global user.name "username yoki ism"
 
-git config --gloabl user.email "email@gmail.com"
+git config --global user.email "email@gmail.com"
 
 
 // git komandalari
@@ -18,11 +18,13 @@ git log -> versiyalarni ko'rsatadi
 git status -> hozirgi loyiha holatini ko'rsatadi
 
 
-
 // Branchlar bilan ishlash
 
 // yangi branch yaratish
 git checkout -b "branch nomi"
 
 // branchga o'tish
-git branch "branch nomi"
+git checkout "branch nomi"
+
+// branchlarni qo'shish (biriktirish)
+git merge "qo'shmoqchi bo'lgan branch nomi"
