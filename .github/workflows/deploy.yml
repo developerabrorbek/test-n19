@@ -25,7 +25,7 @@ jobs:
         ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} << EOF
           cd ${{ secrets.DEPLOY_PATH }}
           git pull origin main
-          npm install -f
+          npm ci
           npm run build
           pm2 restart multilanguage || pm2 start dist/main.js --name multilanguage
         EOF
